@@ -1,0 +1,161 @@
+html,
+body {
+    height: 100%;
+    background: url(../src/images/1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.d1 {
+    z-index:2
+}
+.d1 input {
+    width: 90%;
+    height: 42px;
+    padding-left: 10px;
+    /*border: 2px solid #7BA7AB;*/
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+    z-index:2
+}
+.btnvse{
+    background-color: #5cb85c;
+    margin-top:1%;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fcffea;
+    font-size: 17px;
+}
+
+.d1 button {
+    position: relative;
+    top: 16px;
+    right: 0px;
+    width:60px;
+    height: 42px;
+    border: none;
+    background: #e14e19;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: left;
+    color: #fcffea;
+    /*background-color: transparent;*/
+    background-color: rgba(40, 40, 40, 0.7);
+    /*opacity: 0.7;*/
+    z-index:1;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 0px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+    background-color: #2c2c2c;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}

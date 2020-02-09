@@ -1,0 +1,42 @@
+#footer {
+    margin-top: 40px;
+    position: relative;
+    height: 82px;
+    padding: 10px;
+    font-size: 0.5em;
+    text-align: center;
+    background-image: url(../images/footer.png);
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+}
+
+#footer ul {
+    position: absolute;
+    width: 500px;
+    top: 45px;
+    left: 405px;
+    font-size: 13px;
+}
+
+#footer ul li {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    list-style-image: url(../images/b_li.png);
+}
+
+#footer ul li.sitemap {
+    list-style: none;
+    width: 100px;
+}
+
+#footer ul li.copyr {
+    width: 190px;
+    margin-right: 4px;
+}
+
+#footer ul li a {
+    color: #fff;
+}

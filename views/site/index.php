@@ -2,8 +2,10 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
-?>
+$this->title = 'Kitchen';
+
+use yii\helpers\Html; ?>
+
 <div class="site-index">
 
     <div class="jumbotron">
@@ -15,17 +17,32 @@ $this->title = 'My Yii Application';
             </form>
         </div>
 
-<!--        <p class="lead">You have successfully created your Yii-powered application.</p>-->
+<!--        --><?//= Html::a('Специи', ['/spices/spice'], ['class'=>'btnvse']) ?>
 
-        <a class="btnvse" href="http://www.yiiframework.com">Овощи</a>
-        <a class="btnvse" href="http://www.yiiframework.com">Специи</a>
+        <div class="tab">
+            <?= Html::a('Специи', ['/site/spice'], ['class'=>'tablinks']) ?>
+            <button class="tablinks" onclick="openCity(event, 'Специи')">Специи</button>
+            <button class="tablinks" onclick="openCity(event, 'Овощи')">Овощи</button>
+            <button class="tablinks" onclick="openCity(event, 'Мясо')">Мясо</button>
+        </div>
+        <? $spices = [];?>
+        <div id="Специи" class="tabcontent">
+            <?php foreach ($spices as $spice): ?>
+                <?= Html::img(Yii::getAlias('@web').'/images/'. $spice->image,
+                    ['width' => '150px']);?>
+            <?php endforeach; ?>
+        </div>
+        <div id="Овощи" class="tabcontent">
+            <h3>Овощи</h3>
+            <p>Берлин это столица Германии.</p>
+        </div>
+        <div id="Мясо" class="tabcontent">
+            <h3>Мясо</h3>
+            <p>Пекин это столица Китая.</p>
+        </div>
     </div>
 
     <div class="body-content">
-
-        <div class="row">
-            <img src="web/assets/src/images/nastya.jpg" width="189" height="255" alt="lorem">
-        </div>
 
     </div>
 </div>

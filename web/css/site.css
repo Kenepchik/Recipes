@@ -22,6 +22,41 @@ body {
     color: #9E9C9C;
     z-index:2
 }
+
+.tab {
+    overflow: hidden;
+    /*border: 1px solid #4CAF50;*/
+    /*background-color: #282828;*/
+}
+
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ff8026;
+}
+
+
+.tab button.active {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
 .btnvse{
     background-color: #5cb85c;
     margin-top:1%;
@@ -31,7 +66,9 @@ body {
     color: #fcffea;
     font-size: 17px;
 }
-
+.im{
+    display: inline-flex;
+}
 .d1 button {
     position: relative;
     top: 16px;

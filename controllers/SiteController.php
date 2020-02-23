@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\SignupForm;
+use app\models\Spices;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
@@ -87,7 +88,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    public function actionSpice()
+    {
+        $searchModel = new Spices();
+        $spices = $searchModel->find()->select(['image'])->All();
+        //dd($spices);
 
+        return $this->render('index', [
+            'spices' => $spices,
+        ]);
+    }
     /**
      * Logout action.
      *
@@ -121,28 +131,5 @@ class SiteController extends Controller
         return $this->render('signup', [
             'model' => $model,
         ]);
-    }
-
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }

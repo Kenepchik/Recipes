@@ -66,10 +66,6 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
-    public function actionSearchbyname()
-    {
-        return $this->render('searchbyname');
-    }
 
     /**
      * Login action.

@@ -37,9 +37,9 @@ AppAsset::register($this);
     ]);
 
     $menuItems = [
-        ['label' => 'Поиск рецепта', 'url' => ['/site/index']],
-        ['label' => 'Мой профиль', 'url' => ['/site/about']],
-        ['label' => 'Мой профиль', 'url' => ['/site/index']],
+        ['label' => 'Подбор по продуктам', 'url' => ['/site/index']],
+        ['label' => 'Поиск по названию', 'url' => ['/site/searchbyname']],
+        ['label' => 'Профиль', 'url' => ['/site/about']],
     ];
 
     if (Yii::$app->user->isGuest) {
